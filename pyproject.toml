@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "url-redactor"
+version = "1.0.0"
+description = "Remove username/password credentials from a URL."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "seipass"}]
+
+[project.scripts]
+url-redactor = "url_redactor:main"
+
+[tool.setuptools]
+py-modules = ["url_redactor"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
